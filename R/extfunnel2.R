@@ -45,7 +45,7 @@
 #'
 #'  # Sample size per group on y-axis
 #'  # Assumptions: Equal group sizes and fixed SD
-#'  extfunnel2(data$yi,
+#'  extfunnel2(data$yi, data$sei,
 #'             sd = 15, n = data$ni,
 #'             swe = -20,
 #'             method = "DL",
