@@ -74,12 +74,12 @@ extfunnel2 <- function(yi, sei = sei, sd = NULL, n = NULL, swe,
                        legend_pos = "none", exp = FALSE) {
 
   if (!is.null(sei) & !is.null(sd) & !is.null(n)) {
-    message("Note: 'sei' will be ignored since 'sd' and 'n' are specified. Simulation with sample size only for mean differences.")
+    message("Note: Simulation with sample size works only for mean differences.")
   }
 
   if (!is.null(sd) & !is.null(n)) {
-    extfunnel2_n(yi, sei, method = method, test = test, contour_points = contour_points, swe = swe,
-                 x_lim = x_lim, y_lim = y_lim, sd = sd, n = n, x_lab = xlab, y_lab = ylab, x_ticks =
+    extfunnel2_n(yi = yi, sei = sei, method = method, test = test, contour_points = contour_points, swe = swe,
+                 x_lim = x_lim, y_lim = y_lim, sd = sd, n = n, x_lab = x_lab, y_lab = y_lab, x_ticks =
                    x_ticks, y_ticks = y_ticks, legend_pos = legend_pos)
   } else{
   # Run meta-analysis with current studies

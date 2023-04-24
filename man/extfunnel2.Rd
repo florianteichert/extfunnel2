@@ -6,7 +6,7 @@
 \usage{
 extfunnel2(
   yi,
-  sei = NULL,
+  sei = sei,
   sd = NULL,
   n = NULL,
   swe,
@@ -26,9 +26,9 @@ extfunnel2(
 \arguments{
 \item{yi}{A numeric vector with effect estimates for each study. Odds/ risk ratios should be log-transformed.}
 
-\item{sei}{A numeric vector with standard errors for each study. Specify either 'sei' of 'sd' AND 'n'. If 'sei' is specified the y-axis will correspond to the standard error,}
+\item{sei}{A numeric vector with standard errors for each study. Must be specified. If 'sd' and 'n' are not specified the y-axis will correspond to the standard error.}
 
-\item{sd}{A single numeric value corresponding to the assumed standard deviation per group of a future study. Specify either 'sei' or 'sd' AND 'n'. If sd and n are specified the y-axis will correspond to the sample size per group. Only works for mean differences.}
+\item{sd}{A single numeric value corresponding to the assumed standard deviation per group of a future study. If 'sd' and 'n' are specified the y-axis will correspond to the sample size per group. Only works for mean differences.}
 
 \item{n}{A numeric vector of the average sample size per group for each study. Only needed when 'sd' is specified.}
 
