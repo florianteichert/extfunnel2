@@ -3,8 +3,8 @@
 #' Inspired by the archived \href{https://cran.r-project.org/web/packages/extfunnel/index.html}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 #'
 #' @param yi A numeric vector with effect estimates for each study. Odds/ risk ratios should be log-transformed.
-#' @param sei A numeric vector with standard errors for each study. Specify either 'sei' of 'sd' AND 'n'. If 'sei' is specified the y-axis will correspond to the standard error,
-#' @param sd A single numeric value corresponding to the assumed standard deviation per group of a future study. Specify either 'sei' or 'sd' AND 'n'. If sd and n are specified the y-axis will correspond to the sample size per group.
+#' @param sei A numeric vector with standard errors for each study. Must be specified. If 'sd' and 'n' are not specified the y-axis will correspond to the standard error.
+#' @param sd A single numeric value corresponding to the assumed standard deviation per group of a future study. If 'sd' and 'n' are specified the y-axis will correspond to the sample size per group. Only works for mean differences.
 #' @param n A numeric vector of the average sample size per group for each study. Only needed when 'sd' is specified.
 #' @param swe A single numeric value corresponding to the smallest worthwhile effect. Odds/ risk ratios should be log-transformed.
 #' @param method A character string indicating which method should be used to estimate tau. Default is "REML". See \link[metafor]{rma} of the metafor package for more options.
@@ -65,7 +65,7 @@
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export
-extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
+extfunnel2 <- function(yi, sei = sei, sd = NULL, n = NULL, swe,
                        method = "REML", test = "z",
                        contour_points = 50,
                        x_lim, y_lim,
@@ -74,8 +74,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
                        legend_pos = "none", exp = FALSE) {
 
   if (!is.null(sei) & !is.null(sd) & !is.null(n)) {
-    message("Note: 'sei' will be ignored since 'sd' and 'n' are specified.")
-    message("Note: Only works for mean differences.")
+    message("Note: 'sei' will be ignored since 'sd' and 'n' are specified. Simulation with sample size only for mean differences.")
   }
 
   if (!is.null(sd) & !is.null(n)) {
