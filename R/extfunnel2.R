@@ -60,7 +60,7 @@
 #'Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9. \cr
 #'\url{https://doi.org/10.1016/j.jclinepi.2011.10.009} \cr
 #'
-#'Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. doi:10.1136/bmj.e5913 \cr
+#'Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. \cr
 #'\url{https://doi.org/10.1136/bmj.e5913}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.

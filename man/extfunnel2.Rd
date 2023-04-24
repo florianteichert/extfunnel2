@@ -67,7 +67,7 @@ Inspired by the archived \href{https://cran.r-project.org/web/packages/extfunnel
 Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9. \cr
 \url{https://doi.org/10.1016/j.jclinepi.2011.10.009} \cr
 
-Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. doi:10.1136/bmj.e5913 \cr
+Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. \cr
 \url{https://doi.org/10.1136/bmj.e5913}
 }
 
