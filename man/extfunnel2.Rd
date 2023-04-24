@@ -84,6 +84,6 @@ extfunnel2(data$yi, data$sei,
 
 }
 \seealso{
-\code{\link{https://doi.org/10.1016/j.jclinepi.2011.10.009}}
-\code{\link{https://doi.org/10.1136/bmj.e5913}}
+\url{https://doi.org/10.1016/j.jclinepi.2011.10.009}
+\url{https://doi.org/10.1136/bmj.e5913}
 }

@@ -19,7 +19,7 @@
 #' @param legend_pos A character string indicating the position of the legend in the plot. Default is "none". Can be "top", "right", "bottom", or "left".
 #' @param exp A logical value indicating whether the x-axis should be on a logarithmic scale (in case odds/ risk ratios are provided). Default is FALSE.
 #'
-#' @import dplyr ggplot2 tibble metafor furrr
+#' @import tidyverse metafor furrr
 #'
 #' @examples
 #' # Load package once installed
@@ -42,8 +42,8 @@
 #'            x_lab = "Effect on pain (100 point scale)")
 #'
 #'@seealso
-#'\code{\link{https://doi.org/10.1016/j.jclinepi.2011.10.009}}
-#'\code{\link{https://doi.org/10.1136/bmj.e5913}}
+#'\url{https://doi.org/10.1016/j.jclinepi.2011.10.009}
+#'\url{https://doi.org/10.1136/bmj.e5913}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export
