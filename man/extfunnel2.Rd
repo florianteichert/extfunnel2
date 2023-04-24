@@ -60,19 +60,29 @@ extfunnel2(
 An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 }
 \description{
-Inspired by the archived extfunnel package developed by Dean Langan et al. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+Inspired by the archived \href{https://cran.r-project.org/web/packages/extfunnel/index.html}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al.} The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 }
+\section{References}{
+
+Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9. \cr
+\url{https://doi.org/10.1016/j.jclinepi.2011.10.009} \cr
+
+Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. doi:10.1136/bmj.e5913 \cr
+\url{https://doi.org/10.1136/bmj.e5913}
+}
+
 \examples{
 # Load package once installed
 library(extfunnel2)
 
 # Reproducing the extended funnel plot from Ferreira et al. 2012
-# http://dx.doi.org/10.1136/bmj.e5913
 # Random effects meta-analysis (effect of exercise on chronic low back pain)
 data <- data.frame(yi = c(-10.0, -16.3, -27.0, -14.0, -15.1, -2.1, -19.0, -8.7),
-                   sei = c(3.4, 5.8, 3.4, 5.3, 2.9, 1.1, 7.2, 4.2))
+                   sei = c(3.4, 5.8, 3.4, 5.3, 2.9, 1.1, 7.2, 4.2),
+                   ni = c(174.0, 35.0, 25.0, 30.5, 13.5, 34.0, 15.0, 86.0))
 
 # Generate extended funnel plot
+# Standard error on y-axis
 extfunnel2(data$yi, data$sei,
            swe = -20,
            method = "DL",
@@ -80,10 +90,20 @@ extfunnel2(data$yi, data$sei,
            x_lim = c(-40, 10), y_lim = c(0, 15),
            x_ticks = seq(from = -40, to = 10, by = 10),
            y_ticks = seq(from = 0, to = 15, by = 3),
-           x_lab = "Effect on pain (100 point scale)")
+           x_lab = "Effect on pain (100 point scale)"
+           )
 
-}
-\seealso{
-\url{https://doi.org/10.1016/j.jclinepi.2011.10.009}
-\url{https://doi.org/10.1136/bmj.e5913}
+ # Sample size per group on y-axis
+ # Assumptions: Equal group sizes and fixed SD
+ extfunnel2(data$yi,
+            sd = 15, n = data$ni,
+            swe = -20,
+            method = "DL",
+            contour_points = 500,
+            x_lim = c(-40, 10), y_lim = c(10, 1000),
+            x_ticks = seq(from = -40, to = 10, by = 10),
+            y_ticks = seq(from = 0, to = 1000, by = 200),
+            x_lab = "Effect on pain (100 point scale)"
+            )
+
 }
