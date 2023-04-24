@@ -1,4 +1,4 @@
-extfunnel2
+# extfunnel2
 
 A "modern" version of the archived extfunnel package (https://cran.r-project.org/web/packages/extfunnel/index.html) developed by Dean Langan and colleagues that uses ggplot2 instead of base R. Currently only supports the generation of significance contours.
 
