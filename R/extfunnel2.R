@@ -71,8 +71,8 @@
 #'Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. \cr
 #'\url{https://doi.org/10.1136/bmj.e5913}
 #'
-#'@author Florian Teichert \email{teichert.florian@gmail.com} \cr \cr
-#'ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
+#'@author Florian Teichert \email{teichert.florian@gmail.com} \cr
+#'ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-797}}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export

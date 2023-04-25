@@ -53,7 +53,9 @@ extfunnel2(
 
 \item{y_ticks}{A numeric vector indicating the tick marks for the y-axis. Default is NULL.}
 
-\item{legend_pos}{A character string indicating the position of the legend in the plot. Default is "none". Can be "top", "right", "bottom", or "left".}
+\item{legend_pos}{A character string indicating the position of the legend in the plot. Default is "right". Can be "top", "right", "bottom", or "left".}
+
+\item{legend_just}{A character string indicating the legend justification in relation to the 'legend_pos' argument. Default is NULL. I.e. if 'legend_pos' is "right" and "legend_just" top, the legend will appear at the top right corner of the plot.}
 
 \item{exp}{A logical value indicating whether the x-axis should be on a logarithmic scale (in case odds/ risk ratios are provided). Default is FALSE.}
 }
@@ -116,6 +118,6 @@ extfunnel2(data$yi, data$sei,
 
 }
 \author{
-Florian Teichert \email{teichert.florian@gmail.com} \cr \cr
-ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
+Florian Teichert \email{teichert.florian@gmail.com} \cr
+ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-797}}
 }
