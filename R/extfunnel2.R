@@ -76,7 +76,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
                        x_lim, y_lim,
                        x_lab = "Effect size", y_lab = "Standard error",
                        x_ticks = NULL, y_ticks = NULL,
-                       legend_pos = "none", exp = FALSE) {
+                       legend_pos = "right", legend_just = NULL, exp = FALSE) {
 
   # if (!is.null(sei) & !is.null(sd) & !is.null(n)) {
   #   message("Note: Simulation with sample size works only for mean differences.")
@@ -220,6 +220,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
       axis.title.x = element_text(hjust = 1, margin = margin(t = 10)),
       axis.title.y = element_text(hjust = 1, margin = margin(r = 12)),
       legend.position = legend_pos,
+      legend.justification = legend_just,
       legend.spacing.y = unit(-0.04, "cm"),
       plot.margin = unit(c(0.6, 0.6, 0.6, 0.6), "cm")
     )

@@ -62,7 +62,7 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
                          sd, n,
                          x_lab = "Effect size", y_lab = "Sample size per group",
                          x_ticks = NULL, y_ticks = NULL,
-                         legend_pos = "right") {
+                         legend_pos = "right", legend_just = NULL) {
   # Run meta-analysis with current studies
   res <- tidy_meta(rma.uni(yi = yi, sei = sei, method = method, test = test))
 
@@ -166,6 +166,7 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
       axis.title.x = element_text(hjust = 1, margin = margin(t = 10)),
       axis.title.y = element_text(hjust = 1, margin = margin(r = 12)),
       legend.position = legend_pos,
+      legend.justification = legend_just,
       legend.spacing.y = unit(-0.04, "cm"),
       plot.margin = unit(c(0.6, 0.6, 0.6, 0.6), "cm")
     )
