@@ -74,8 +74,7 @@
 #'
 #'@section References:
 #'
-#'extfunnel package
-#'\cr
+#'extfunnel package \cr
 #'\url{https://cran.r-project.org/package=extfunnel} \cr
 #'
 #'Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9. \cr
