@@ -91,7 +91,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
   if (!is.null(sd) & !is.null(n)) {
     extfunnel2_n(yi = yi, sei = sei, method = method, test = test, contour_points = contour_points, swe = swe,
                  x_lim = x_lim, y_lim = y_lim, sd = sd, n = n, x_lab = x_lab, y_lab = y_lab, x_ticks =
-                   x_ticks, y_ticks = y_ticks, legend_pos = legend_pos)
+                   x_ticks, y_ticks = y_ticks, legend_pos = legend_pos, legend_just = legend_just)
   } else{
   # Run meta-analysis with current studies
   res <- tidy_meta(rma.uni(yi = yi, sei = sei, method = method, test = test))
