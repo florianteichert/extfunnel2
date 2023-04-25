@@ -220,6 +220,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
       axis.title.x = element_text(hjust = 1, margin = margin(t = 10)),
       axis.title.y = element_text(hjust = 1, margin = margin(r = 12)),
       legend.position = legend_pos,
+      legend.spacing.y = unit(-0.04, "cm"),
       plot.margin = unit(c(0.6, 0.6, 0.6, 0.6), "cm")
     )
   }
