@@ -20,8 +20,6 @@
 #' @param legend_just A character string indicating the legend justification in relation to the 'legend_pos' argument. Default is NULL. I.e. if 'legend_pos' is "right" and 'legend_just' top, the legend will appear at the top right corner of the plot.
 #' @param exp A logical value indicating whether the x-axis should be on a logarithmic scale (in case odds/ risk ratios are provided). Default is FALSE.
 #'
-#' @import tidyverse metafor furrr
-#'
 #' @examples
 #' # Load package once installed
 #' library(extfunnel2)
