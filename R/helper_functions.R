@@ -145,7 +145,7 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
     labs(x = x_lab, y = y_lab) +
     scale_color_manual(values = c("Smallest worthwhile effect" = "black", "Current pooled estimate" = "black")) +
     scale_shape_manual(values = c("Current point estimates" = 21)) +
-    scale_fill_manual(values = c("Clearly worthwhile" = "#bf32de", "Unclear if worthwhile" = "#f7766d", "Clearly not worthwhile" = "#03bfc4")) +
+    scale_fill_manual(values = c("Clearly worthwhile" = "#ded032", "Unclear if worthwhile" = "#f7766d", "Clearly not worthwhile" = "#03bfc4")) +
     theme_classic() +
     theme(legend.title = element_blank()) +
     guides(color = guide_legend(
