@@ -165,6 +165,7 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
       axis.title = element_text(size = 10, face = "bold"),
       axis.title.x = element_text(hjust = 1, margin = margin(t = 10)),
       axis.title.y = element_text(hjust = 1, margin = margin(r = 12)),
-      legend.position = legend_pos
+      legend.position = legend_pos,
+      plot.margin = unit(c(0.6, 0.6, 0.6, 0.6), "cm")
     )
 }

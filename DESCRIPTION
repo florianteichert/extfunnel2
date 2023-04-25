@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Florian", "Teichert", email = "teichert.florian@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2211-7974"))
-Description: nspired by the archived \href{https://cran.r-project.org/web/packages/extfunnel/index.html}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group. 
+Description: nspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8

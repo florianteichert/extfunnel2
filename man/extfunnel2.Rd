@@ -38,7 +38,7 @@ extfunnel2(
 
 \item{test}{A character string indicating which method should be use to calculate confidence intervals. Default is "z". \link[metafor]{rma} of the metafor package for more options.}
 
-\item{contour_points}{A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommend (this might take while!).}
+\item{contour_points}{A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommend. This takes a long time as 250.000 (500x500) meta-analyses will run (one contour point equates to one meta-analysis).}
 
 \item{x_lim}{A numeric vector with two values indicating the lower and upper limits of the simulated effect estimates (corresponds to x-axis limits). Odds/ risk ratios should be log-transformed.}
 
@@ -60,9 +60,14 @@ extfunnel2(
 An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 }
 \description{
-Inspired by the archived \href{https://cran.r-project.org/web/packages/extfunnel/index.html}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 }
 \section{References}{
+
+
+extfunnel package
+\cr
+\url{https://cran.r-project.org/package=extfunnel} \cr
 
 Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9. \cr
 \url{https://doi.org/10.1016/j.jclinepi.2011.10.009} \cr
