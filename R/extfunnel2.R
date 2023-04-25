@@ -16,7 +16,8 @@
 #' @param y_lab A character string indicating the y-axis label for the plot. Default is "Standard error".
 #' @param x_ticks A numeric vector indicating the tick marks for the x-axis. Default is NULL. Odds/ risk ratios should be log-transformed.
 #' @param y_ticks A numeric vector indicating the tick marks for the y-axis. Default is NULL.
-#' @param legend_pos A character string indicating the position of the legend in the plot. Default is "none". Can be "top", "right", "bottom", or "left".
+#' @param legend_pos A character string indicating the position of the legend in the plot. Default is "right". Can be "top", "right", "bottom", or "left".
+#' @param legend_just A character string indicating the legend justification in relation to the 'legend_pos' argument. Default is NULL. I.e. if 'legend_pos' is "right" and "legend_just" top, the legend will appear at the top right corner of the plot.
 #' @param exp A logical value indicating whether the x-axis should be on a logarithmic scale (in case odds/ risk ratios are provided). Default is FALSE.
 #'
 #' @import tidyverse metafor furrr
@@ -70,7 +71,8 @@
 #'Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. \cr
 #'\url{https://doi.org/10.1136/bmj.e5913}
 #'
-#'@author Florian Teichert, \email{teichert.florian@gmail.com}, ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
+#'@author Florian Teichert \email{teichert.florian@gmail.com} \cr \cr
+#'ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export
