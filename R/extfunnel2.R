@@ -17,7 +17,7 @@
 #' @param x_ticks A numeric vector indicating the tick marks for the x-axis. Default is NULL. Odds/ risk ratios should be log-transformed.
 #' @param y_ticks A numeric vector indicating the tick marks for the y-axis. Default is NULL.
 #' @param legend_pos A character string indicating the position of the legend in the plot. Default is "right". Can be "top", "right", "bottom", or "left".
-#' @param legend_just A character string indicating the legend justification in relation to the 'legend_pos' argument. Default is NULL. I.e. if 'legend_pos' is "right" and "legend_just" top, the legend will appear at the top right corner of the plot.
+#' @param legend_just A character string indicating the legend justification in relation to the 'legend_pos' argument. Default is NULL. I.e. if 'legend_pos' is "right" and 'legend_just' top, the legend will appear at the top right corner of the plot.
 #' @param exp A logical value indicating whether the x-axis should be on a logarithmic scale (in case odds/ risk ratios are provided). Default is FALSE.
 #'
 #' @import tidyverse metafor furrr
@@ -56,7 +56,22 @@
 #'             x_ticks = seq(from = -40, to = 10, by = 10),
 #'             y_ticks = seq(from = 0, to = 1000, by = 200),
 #'             x_lab = "Effect on pain (100 point scale)",
+#'             y_lab = "Sample size per group",
 #'             legend_pos = "none"
+#'             )
+#'
+#'  # With legend
+#'  extfunnel2(data$yi, data$sei,
+#'             sd = 15, n = data$ni,
+#'             swe = -20,
+#'             method = "DL",
+#'             contour_points = 50,
+#'             x_lim = c(-40, 10), y_lim = c(10, 1000),
+#'             x_ticks = seq(from = -40, to = 10, by = 10),
+#'             y_ticks = seq(from = 0, to = 1000, by = 200),
+#'             x_lab = "Effect on pain (100 point scale)",
+#'             y_lab = "Sample size per group",
+#'             legend_just = "top"
 #'             )
 #'
 #'@section References:
