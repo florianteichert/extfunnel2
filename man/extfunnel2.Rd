@@ -2,7 +2,7 @@
 % Please edit documentation in R/extfunnel2.R
 \name{extfunnel2}
 \alias{extfunnel2}
-\title{Generate Extended Funnel Plot}
+\title{Create Extended Funnel Plots}
 \usage{
 extfunnel2(
   yi,
@@ -19,7 +19,8 @@ extfunnel2(
   y_lab = "Standard error",
   x_ticks = NULL,
   y_ticks = NULL,
-  legend_pos = "none",
+  legend_pos = "right",
+  legend_just = NULL,
   exp = FALSE
 )
 }
@@ -60,7 +61,7 @@ extfunnel2(
 An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 }
 \description{
-Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel package} developed by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel package} by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 }
 \section{References}{
 
@@ -86,7 +87,7 @@ data <- data.frame(yi = c(-10.0, -16.3, -27.0, -14.0, -15.1, -2.1, -19.0, -8.7),
                    sei = c(3.4, 5.8, 3.4, 5.3, 2.9, 1.1, 7.2, 4.2),
                    ni = c(174.0, 35.0, 25.0, 30.5, 13.5, 34.0, 15.0, 86.0))
 
-# Generate extended funnel plot
+# Create extended funnel plot
 # Standard error on y-axis
 extfunnel2(data$yi, data$sei,
            swe = -20,
@@ -95,7 +96,8 @@ extfunnel2(data$yi, data$sei,
            x_lim = c(-40, 10), y_lim = c(0, 15),
            x_ticks = seq(from = -40, to = 10, by = 10),
            y_ticks = seq(from = 0, to = 15, by = 3),
-           x_lab = "Effect on pain (100 point scale)"
+           x_lab = "Effect on pain (100 point scale)",
+           legend_pos = "none"
            )
 
  # Sample size per group on y-axis
@@ -108,7 +110,11 @@ extfunnel2(data$yi, data$sei,
             x_lim = c(-40, 10), y_lim = c(10, 1000),
             x_ticks = seq(from = -40, to = 10, by = 10),
             y_ticks = seq(from = 0, to = 1000, by = 200),
-            x_lab = "Effect on pain (100 point scale)"
+            x_lab = "Effect on pain (100 point scale)",
+            legend_pos = "none"
             )
 
+}
+\author{
+Florian Teichert, \email{teichert.florian@gmail.com}, ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
 }

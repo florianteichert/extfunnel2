@@ -1,6 +1,6 @@
-#' Generate Extended Funnel Plot
+#' Create Extended Funnel Plots
 #'
-#' Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel package} by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function generates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+#' Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel } package by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 #'
 #' @param yi A numeric vector with effect estimates for each study. Odds/ risk ratios should be log-transformed.
 #' @param sei A numeric vector with standard errors for each study. Must be specified. If 'sd' and 'n' are not specified the y-axis will correspond to the standard error.
@@ -31,7 +31,7 @@
 #'                    sei = c(3.4, 5.8, 3.4, 5.3, 2.9, 1.1, 7.2, 4.2),
 #'                    ni = c(174.0, 35.0, 25.0, 30.5, 13.5, 34.0, 15.0, 86.0))
 #'
-#' # Generate extended funnel plot
+#' # Create extended funnel plot
 #' # Standard error on y-axis
 #' extfunnel2(data$yi, data$sei,
 #'            swe = -20,
@@ -40,7 +40,8 @@
 #'            x_lim = c(-40, 10), y_lim = c(0, 15),
 #'            x_ticks = seq(from = -40, to = 10, by = 10),
 #'            y_ticks = seq(from = 0, to = 15, by = 3),
-#'            x_lab = "Effect on pain (100 point scale)"
+#'            x_lab = "Effect on pain (100 point scale)",
+#'            legend_pos = "none"
 #'            )
 #'
 #'  # Sample size per group on y-axis
@@ -53,7 +54,8 @@
 #'             x_lim = c(-40, 10), y_lim = c(10, 1000),
 #'             x_ticks = seq(from = -40, to = 10, by = 10),
 #'             y_ticks = seq(from = 0, to = 1000, by = 200),
-#'             x_lab = "Effect on pain (100 point scale)"
+#'             x_lab = "Effect on pain (100 point scale)",
+#'             legend_pos = "none"
 #'             )
 #'
 #'@section References:
@@ -67,6 +69,8 @@
 #'
 #'Ferreira ML, Herbert RD, Crowther MJ, et al. When is a further clinical trial justified? BMJ 2012;345:e5913. \cr
 #'\url{https://doi.org/10.1136/bmj.e5913}
+#'
+#'@author Florian Teichert, \email{teichert.florian@gmail.com}, ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-7974}}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export
@@ -168,6 +172,7 @@ extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
       scale_color_manual(values = c("Smallest worthwhile effect" = "black", "Current pooled estimate" = "black")) +
       scale_shape_manual(values = c("Current point estimates" = 21)) +
       scale_fill_manual(values = c("Clearly worthwhile" = "#ded032", "Unclear if worthwhile" = "#f7766d", "Clearly not worthwhile" = "#03bfc4")) +
+      # #f7906d, #bf32de
       theme_classic() +
       theme(legend.title = element_blank()) +
       guides(color = guide_legend(
