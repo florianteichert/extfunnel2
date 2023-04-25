@@ -73,9 +73,9 @@ extfunnel2 <- function(yi, sei = sei, sd = NULL, n = NULL, swe,
                        x_ticks = NULL, y_ticks = NULL,
                        legend_pos = "none", exp = FALSE) {
 
-  if (!is.null(sei) & !is.null(sd) & !is.null(n)) {
-    message("Note: Simulation with sample size works only for mean differences.")
-  }
+  # if (!is.null(sei) & !is.null(sd) & !is.null(n)) {
+  #   message("Note: Simulation with sample size works only for mean differences.")
+  # }
 
   if (!is.null(sd) & !is.null(n)) {
     extfunnel2_n(yi = yi, sei = sei, method = method, test = test, contour_points = contour_points, swe = swe,
