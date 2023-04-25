@@ -49,7 +49,7 @@
 #'             sd = 15, n = data$ni,
 #'             swe = -20,
 #'             method = "DL",
-#'             contour_points = 500,
+#'             contour_points = 50,
 #'             x_lim = c(-40, 10), y_lim = c(10, 1000),
 #'             x_ticks = seq(from = -40, to = 10, by = 10),
 #'             y_ticks = seq(from = 0, to = 1000, by = 200),
