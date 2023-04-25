@@ -6,7 +6,7 @@
 \usage{
 extfunnel2(
   yi,
-  sei = sei,
+  sei,
   sd = NULL,
   n = NULL,
   swe,

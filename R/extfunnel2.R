@@ -65,7 +65,7 @@
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 #' @export
-extfunnel2 <- function(yi, sei = sei, sd = NULL, n = NULL, swe,
+extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
                        method = "REML", test = "z",
                        contour_points = 50,
                        x_lim, y_lim,
