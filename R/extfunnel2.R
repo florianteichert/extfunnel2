@@ -1,6 +1,6 @@
 #' Create Extended Funnel Plots
 #'
-#' Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel } package by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+#' Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel} package by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 #'
 #' @param yi A numeric vector with effect estimates for each study. Odds/ risk ratios should be log-transformed.
 #' @param sei A numeric vector with standard errors for each study. Must be specified. If 'sd' and 'n' are not specified the y-axis will correspond to the standard error.
