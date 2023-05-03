@@ -11,14 +11,14 @@ Inspired by the archived <a href="https://cran.r-project.org/package=extfunnel">
 # install.packages("remotes")
 remotes::install_github("florianteichert/extfunnel2")
 ```
-
+<br><br>
 ## Examples
 ``` r
 library(extfunnel2)
 ?extfunnel2
 ```
-
-<b>Acknowledgements</b> <br>
+<br><br>
+## Acknowledgements/ References
 extfunnel package<br>
 https://cran.r-project.org/package=extfunnel <br><br>
 Langan D, Higgins JPT, Gregory W, et al. Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. J Clin Epidemiol 2012;65:511–9.  
