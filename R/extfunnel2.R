@@ -87,6 +87,13 @@
 #'ORCID {\href{https://orcid.org/0000-0003-2211-7974}{0000-0003-2211-797}}
 #'
 #' @return An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
+#' @import metafor
+#' @import tibble
+#' @import dplyr
+#' @import tidyr
+#' @import purrr
+#' @import furrr
+#' @import ggplot2
 #' @export
 extfunnel2 <- function(yi, sei, sd = NULL, n = NULL, swe,
                        method = "REML", test = "z",
