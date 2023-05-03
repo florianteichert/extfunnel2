@@ -37,13 +37,13 @@ extfunnel2(
 
 \item{method}{A character string indicating which method should be used to estimate tau. Default is "REML". See \link[metafor]{rma} of the metafor package for more options.}
 
-\item{test}{A character string indicating which method should be use to calculate confidence intervals. Default is "z". \link[metafor]{rma} of the metafor package for more options.}
+\item{test}{A character string indicating which method should be use to calculate confidence intervals. Default is "z". See \link[metafor]{rma} of the metafor package for more options.}
 
-\item{contour_points}{A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommend. This takes a long time as 250.000 (500x500) meta-analyses will run (one contour point equates to one meta-analysis).}
+\item{contour_points}{A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommended. This takes a long time as 250.000 (500x500) meta-analyses will run (one contour point equates to one meta-analysis).}
 
 \item{x_lim}{A numeric vector with two values indicating the lower and upper limits of the simulated effect estimates (corresponds to x-axis limits). Odds/ risk ratios should be log-transformed.}
 
-\item{y_lim}{A numeric vector with two values indicating the lower and upper limits of the simulated standard errors (corresponds to y-axis limits). If 'sd' and 'n' are provided 'y_lim' corresponds to lower and upper limits of the sample size per group.}
+\item{y_lim}{A numeric vector with two values indicating the lower and upper limits of the simulated standard errors (corresponds to y-axis limits). If 'sd' and 'n' are provided 'y_lim' corresponds to the lower and upper limits of the sample size per group.}
 
 \item{x_lab}{A character string indicating the x-axis label for the plot. Default is "Effect size".}
 
@@ -63,7 +63,7 @@ extfunnel2(
 An extended funnel plot (ggplot2 object) with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis.
 }
 \description{
-Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel } package by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{extfunnel} package by \href{https://doi.org/10.1016/j.jclinepi.2011.10.009}{Langan et al}. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
 }
 \section{References}{
 

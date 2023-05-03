@@ -8,10 +8,10 @@
 #' @param n A numeric vector of the average sample size per group for each study. Only needed when 'sd' is specified.
 #' @param swe A single numeric value corresponding to the smallest worthwhile effect. Odds/ risk ratios should be log-transformed.
 #' @param method A character string indicating which method should be used to estimate tau. Default is "REML". See \link[metafor]{rma} of the metafor package for more options.
-#' @param test A character string indicating which method should be use to calculate confidence intervals. Default is "z". \link[metafor]{rma} of the metafor package for more options.
-#' @param contour_points A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommend. This takes a long time as 250.000 (500x500) meta-analyses will run (one contour point equates to one meta-analysis).
+#' @param test A character string indicating which method should be use to calculate confidence intervals. Default is "z". See \link[metafor]{rma} of the metafor package for more options.
+#' @param contour_points A numeric value indicating the number of contour points to be used for simulation. Default is 50. For high quality contours 500 is recommended. This takes a long time as 250.000 (500x500) meta-analyses will run (one contour point equates to one meta-analysis).
 #' @param x_lim A numeric vector with two values indicating the lower and upper limits of the simulated effect estimates (corresponds to x-axis limits). Odds/ risk ratios should be log-transformed.
-#' @param y_lim A numeric vector with two values indicating the lower and upper limits of the simulated standard errors (corresponds to y-axis limits). If 'sd' and 'n' are provided 'y_lim' corresponds to lower and upper limits of the sample size per group.
+#' @param y_lim A numeric vector with two values indicating the lower and upper limits of the simulated standard errors (corresponds to y-axis limits). If 'sd' and 'n' are provided 'y_lim' corresponds to the lower and upper limits of the sample size per group.
 #' @param x_lab A character string indicating the x-axis label for the plot. Default is "Effect size".
 #' @param y_lab A character string indicating the y-axis label for the plot. Default is "Standard error".
 #' @param x_ticks A numeric vector indicating the tick marks for the x-axis. Default is NULL. Odds/ risk ratios should be log-transformed.
