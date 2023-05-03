@@ -4,7 +4,7 @@ Inspired by the archived <a href="https://cran.r-project.org/package=extfunnel">
 
 ## Installation
 
-`{extfunnel2}` is not on CRAN. You can install the latest version from
+`extfunnel2` is not on CRAN. You can install the latest version from
 [GitHub](https://github.com/florianteichert/extfunnel2) with:
 
 ``` r
