@@ -102,8 +102,11 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
         n_sim = n_sim,
         sei_sim = c(sei, sei_sim)
       )
-    }) %>%
-    list_rbind()
+    })
+
+  plan(sequential)
+
+  df_comb <- df_comb %>% bind_rows()
 
   res_sim <- df_comb %>%
     group_by(id) %>%
