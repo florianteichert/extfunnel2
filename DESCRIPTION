@@ -15,5 +15,6 @@ Imports:
     dplyr,
     tidyr,
     purrr,
+    future,
     furrr,
     ggplot2

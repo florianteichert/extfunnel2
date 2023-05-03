@@ -23,6 +23,7 @@ axis_limits <- function(plot, x_lim, y_lim, x_ticks, y_ticks) {
       scale_y_reverse(expand = expansion(mult = 0)) +
       coord_cartesian(ylim = c(y_lim[2], y_lim[1]), xlim = c(x_lim[1], x_lim[2]))
   }
+  closeAllConnections()
   plot
 }
 
@@ -38,6 +39,7 @@ axis_limits_exp <- function(plot, x_lim, y_lim, x_ticks, y_ticks) {
       scale_y_reverse(expand = expansion(mult = 0)) +
       coord_cartesian(ylim = c(y_lim[2], y_lim[1]), xlim = c(exp(x_lim[1]), exp(x_lim[2])))
   }
+  closeAllConnections()
   plot
 }
 
@@ -53,6 +55,7 @@ axis_limits_n <- function(plot, x_lim, y_lim, x_ticks, y_ticks) {
       scale_y_continuous(expand = expansion(mult = 0)) +
       coord_cartesian(ylim = c(y_lim[1], y_lim[2]), xlim = c(x_lim[1], x_lim[2]))
   }
+  closeAllConnections()
   plot
 }
 
@@ -63,7 +66,8 @@ extfunnel2_n <- function(yi, sei, method = "REML", test = "z",
                          x_lab = "Effect size", y_lab = "Sample size per group",
                          x_ticks = NULL, y_ticks = NULL,
                          legend_pos = "right", legend_just = NULL) {
-  # Run meta-analysis with current studies
+
+   # Run meta-analysis with current studies
   res <- tidy_meta(rma.uni(yi = yi, sei = sei, method = method, test = test))
 
 

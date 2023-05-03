@@ -130,6 +130,7 @@ extfunnel2(data$yi, data$sei,
             legend_just = "top"
             )
 
+
 }
 \author{
 Florian Teichert \email{teichert.florian@gmail.com} \cr

@@ -3,6 +3,7 @@
 export(extfunnel2)
 import(dplyr)
 import(furrr)
+import(future)
 import(ggplot2)
 import(metafor)
 import(purrr)
