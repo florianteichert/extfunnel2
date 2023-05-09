@@ -47,8 +47,8 @@ library(extfunnel2)
 
 ## References
 
-1. extfunnel package. <https://cran.r-project.org/package=extfunnel> 
+1. Langan, D. (2013). extfunnel. R package version 1.3. <https://cran.r-project.org/package=extfunnel> 
 <br><br>
 2. Langan, D., Higgins, J. P. T., Gregory, W., & Sutton, A. J. (2012). Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. Journal of Clinical Epidemiology, 65(5), 511–519. <https://doi.org/10.1016/j.jclinepi.2011.10.009> 
 <br><br> 
-3. Ferreira, M. L., Herbert, R. D., Crowther, M. J., Verhagen, A., & Sutton, A. J. (2012). When is a further clinical trial justified? BMJ , 345, e5913. <https://doi.org/10.1136/bmj.e5913>
+3. Ferreira, M. L., Herbert, R. D., Crowther, M. J., Verhagen, A., & Sutton, A. J. (2012). When is a further clinical trial justified? BMJ, 345, e5913. <https://doi.org/10.1136/bmj.e5913>
