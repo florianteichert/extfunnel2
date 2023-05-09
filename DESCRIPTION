@@ -17,5 +17,6 @@ Imports:
     purrr,
     future,
     furrr,
-    ggplot2
+    ggplot2,
+    rlang
 URL: https://florianteichert.github.io/extfunnel2/
