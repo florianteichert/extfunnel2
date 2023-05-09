@@ -33,9 +33,9 @@ library(extfunnel2)
 
 ## How to cite this package in your article
 
-> Florian Teichert. extfunnel2: 
-> Create Extended Funnel Plots. R package version 0.1.0. 2023. 
-> <https://doi.org/10.5281/zenodo.7916484>.
+> Teichert, F. (2023). extfunnel2: 
+> Create Extended Funnel Plots. R package version 0.1.0. 
+> <https://doi.org/10.5281/zenodo.7916484>
 
 ## References
 
