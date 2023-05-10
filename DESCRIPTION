@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: 
     person("Florian", "Teichert", email = "teichert.florian@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2211-7974"))
-Description: Inspired by the archived extfunnel package by Langan et al. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model as well as simulation using sample size per group.
+Description: Inspired by the archived extfunnel package by Langan et al. The function creates an extended funnel plot with shaded contours that show the impact of a new study with a certain effect estimate and standard error (or sample size) on the conclusions of an updated meta-analysis. Uses ggplot2 instead of base R, allows specification of the meta-analytic model via the metafor package as well as simulation using sample size per group.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
