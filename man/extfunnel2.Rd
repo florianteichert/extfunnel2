@@ -68,7 +68,7 @@ Inspired by the archived \href{https://cran.r-project.org/package=extfunnel}{ext
 \section{Acknowledgments}{
 
 \enumerate{
-\item Langan, D. (2013). extfunnel. R package version 1.3. \url{https://cran.r-project.org/package=extfunnel}
+\item Langan, D., Sutton, A. J., Higgins, J. P. T. & Gregory, W. (2013). extfunnel. R package version 1.3. \url{https://cran.r-project.org/package=extfunnel}
 \item Langan, D., Higgins, J. P. T., Gregory, W., & Sutton, A. J. (2012). Graphical augmentations to the funnel plot assess the impact of additional evidence on a meta-analysis. Journal of Clinical Epidemiology, 65(5), 511–519. \url{https://doi.org/10.1016/j.jclinepi.2011.10.009}
 \item Ferreira, M. L., Herbert, R. D., Crowther, M. J., Verhagen, A., & Sutton, A. J. (2012). When is a further clinical trial justified? BMJ, 345, e5913. \url{https://doi.org/10.1136/bmj.e5913}
 \item Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. \url{https://ggplot2.tidyverse.org}
