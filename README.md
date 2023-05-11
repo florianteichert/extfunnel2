@@ -34,8 +34,8 @@ library(extfunnel2)
 ## How to cite this package in your article
 
 > Teichert, F. (2023). extfunnel2: 
-> Create Extended Funnel Plots. R package version 0.1.0.
-> <https://doi.org/10.5281/zenodo.7916484>
+> Create Extended Funnel Plots. R package version 0.1.1.
+> <https://doi.org/10.5281/zenodo.7922119>
 
 ## Please also cite
 > Langan, D., Higgins, J. P. T., Gregory, W., & Sutton, A. J. (2012). 

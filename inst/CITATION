@@ -1,6 +1,6 @@
 bibentry(
   bibtype  = "Misc",
-  title    = "extfunnel2: Create Extended Funnel Plots. R package version 0.1.0",
+  title    = "extfunnel2: Create Extended Funnel Plots. R package version 0.1.1",
   author   = person("Florian", "Teichert"),
   year     = 2023,
   doi      = "10.5281/zenodo.7922119"
